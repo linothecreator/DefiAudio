@@ -1,0 +1,12 @@
+.pad-controls {
+    padding-bottom: 30px;
+    display: flex;
+    padding-top: 1%;
+    padding-left: 5%;
+    padding-right: 5%;
+    justify-content: space-evenly;
+}
+
+.current-sound{
+
+}

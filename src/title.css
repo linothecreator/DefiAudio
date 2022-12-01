@@ -1,0 +1,9 @@
+.title {
+    background-image: url("platinum-3.jpg");
+    width: 100%;
+    height: 200px;
+    margin: 0 auto;
+}
+.title h1, h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload File</title>   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.socket.io/4.5.0/socket.io.min.js" integrity="sha384-7EyYLQZgWBi67fBtVxw60/OWl1kjsfrPFcaU0pp0nAh+i8FD068QogUvg85Ewy1k" crossorigin="anonymous"></script>   
+
+
+    <link rel="icon" type="image/x-icon" href="/src/favicon.ico">  
+    <link rel="stylesheet" href="/src/mpc.css"> 
+    <link rel="stylesheet" href="/src/layout.css"> 
+    <link rel="stylesheet" href="/src/navbar.css"> 
+    <link rel="stylesheet" href="/src/page-background.css"> 
+    <link rel="stylesheet" href="/src/bank-slider.css"> 
+    <link rel="stylesheet" href="/src/pad-controls.css"> 
+    <link rel="stylesheet" href="/src/exchange-grid.css"> 
+    <link rel="stylesheet" href="/src/search-bar.css"> 
+    <link rel="stylesheet" href="/src/video-section.css"> 
+    <link rel="stylesheet" href="/src/logo-title.css">
+    <link rel="stylesheet" href="/src/title.css">  
+
+</head>
+<body class="page-background">
+
+<!-- LOGO TITLE -->
+<div class="logo-title">
+  <h1>KryptoKit$</h1>
+</div>
+
+
+<!-- NAVBAR -->
+<nav id='menu'>
+  <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+  <ul>
+    <li><a href='http://'>Home</a></li>
+    <li><a class='dropdown-arrow' href='http://'>Products</a>
+      <ul class='sub-menus'>
+        <li><a href='http://'>Products 1</a></li>
+        <li><a href='http://'>Products 2</a></li>
+        <li><a href='http://'>Products 3</a></li>
+        <li><a href='http://'>Products 4</a></li>
+      </ul>
+    </li>
+    <li><a href='http://'>About</a></li>
+    <li><a class='dropdown-arrow' href='http://'>Services</a>
+      <ul class='sub-menus'>
+        <li><a href='http://'>Services 1</a></li>
+        <li><a href='http://'>Services 2</a></li>
+        <li><a href='http://'>Services 3</a></li>
+      </ul>
+    </li>
+    <li><a href='http://'>Contact Us</a></li>
+  </ul>
+</nav>
+
+<!-- SEARCH BAR -->
+<div class="search-bar">
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <symbol xmlns="http://www.w3.org/2000/svg" id="sbx-icon-search-4" viewBox="0 0 40 41">
+    <path d="M25.54 28.188c-2.686 2.115-6.075 3.376-9.758 3.376C7.066 31.564 0 24.498 0 15.782 0 7.066 7.066 0 15.782 0c8.716 0 15.782 7.066 15.782 15.782 0 4.22-1.656 8.052-4.353 10.884l1.752 1.75 1.06-1.06L40 37.332l-3.72 3.72-9.977-9.976 1.062-1.062-1.826-1.826zm-9.758.746c7.264 0 13.152-5.888 13.152-13.152 0-7.263-5.888-13.152-13.152-13.152C8.52 2.63 2.63 8.52 2.63 15.782c0 7.264 5.89 13.152 13.152 13.152z"
+    fill-rule="evenodd" />
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" id="sbx-icon-clear-3" viewBox="0 0 20 20">
+    <path d="M8.114 10L.944 2.83 0 1.885 1.886 0l.943.943L10 8.113l7.17-7.17.944-.943L20 1.886l-.943.943-7.17 7.17 7.17 7.17.943.944L18.114 20l-.943-.943-7.17-7.17-7.17 7.17-.944.943L0 18.114l.943-.943L8.113 10z" fill-rule="evenodd" />
+  </symbol>
+</svg>
+
+<form novalidate="novalidate" onsubmit="return false;" class="searchbox sbx-custom">
+  <div role="search" class="sbx-custom__wrapper">
+    <input type="search" name="search" placeholder="Search your website" autocomplete="off" required="required" class="sbx-custom__input">
+    <button type="submit" title="Submit your search query." class="sbx-custom__submit">
+      <svg role="img" aria-label="Search">
+        <use xlink:href="#sbx-icon-search-4"></use>
+      </svg>
+    </button>
+    <button type="reset" title="Clear the search query." class="sbx-custom__reset">
+      <svg role="img" aria-label="Reset">
+        <use xlink:href="#sbx-icon-clear-3"></use>
+      </svg>
+    </button>
+  </div>
+</form></div>
+<script type="text/javascript">
+  document.querySelector('.searchbox [type="reset"]').addEventListener('click', function() {  this.parentNode.querySelector('input').focus();});
+</script>
+
+<!-- VIDEO  -->  
+<!-- <center> 
+    <div class="video-section">
+      <iframe width="100%" height="300px" src="https://www.youtube.com/embed/_o-I2xI4l4U">
+      </iframe></div></center> -->
+       
+<!-- TITLE   -->
+<center>            
+  <div class="title">
+  <section class="pad-title">
+    <br><br><br>
+        <h1>Name of Sound Kit</h1><br>
+        <h2>Created By: </h2>
+    <h3>"Name"</h3></div></div> 
+</section></center>
+             
+<!-- DRUMPAD -->
+            <div class="mpc-btn-grid">
+            <div id="pad1"class="mpc-btn">1</div>
+            <div id="pad2"class="mpc-btn">2</div>
+            <div id="pad3"class="mpc-btn">3</div>
+            <div id="pad4"class="mpc-btn">4</div>
+        
+            <div id="pad5"class="mpc-btn">5</div>
+            <div id="pad6"class="mpc-btn">6</div>
+            <div id="pad7"class="mpc-btn">7</div>
+            <div id="pad8"class="mpc-btn">8</div>
+        
+            <div id="pad9" class="mpc-btn">9</div>
+            <div id="pad10" class="mpc-btn">10</div>
+            <div id="pad11" class="mpc-btn">11</div>
+            <div id="pad12" class="mpc-btn">12</div>
+            
+            <div id="pad13"class="mpc-btn">13</div>
+            <div id="pad14"class="mpc-btn">14</div>
+            <div id="pad15"class="mpc-btn">15</div>
+            <div id="pad16"class="mpc-btn">16</div></div>
+
+<!-- PAD CONTOLS -->
+
+           <div class="pad-controls">
+           
+            <div><p>Select Bank</p>
+                <p>Bank: <span id="bank-slider-value"></span></p>
+                <div class="bank-slider-container">
+                <input type="range" min="1" max="25" value="1" class="bank-slider" id="bank-slider-range">
+                
+              </div></div>
+              <div><p>Currnet Sound: </p>
+            <div class="current-sound">"No Sound Se</div></div>
+            
+            </div>
+
+          <script src="/src/pads.js"></script> 
+        
+
+
+
+<!-- EXCHANGE -->
+<h2>Recommended Kits</h2>
+<div class="exchange-grid">
+<div class="exchange-block">1</div>
+<div class="exchange-block">2</div>
+<div class="exchange-block">3</div>
+</div>
+               
+ <center >
+     <H2>Upload Library</H2>
+     <form id="form" action="/upload" method="post">
+      <input type="submit" id="formButton" style="display:none">       
+        </form>
+        <button id="selectButton">Select Files</button>
+        <button id="dummyButton" value="notnull">Done</button>
+    <input type="file" id="fileInput" name="fileInput" multiple style="display:none" >     
+    <div id="ab1" value="nofile selected"></div> 
+    <script>
+    var socket = io.connect('http://localhost:3000');
+    console.log("Web Page");
+    </script>    
+    </center>     
+     <script src="/src/azure.js" type="text/javascript"></script> 
+  
+</body>
+</html>

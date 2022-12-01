@@ -1,0 +1,17 @@
+.exchange-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 200px;
+
+    gap: 5px 5px;
+    padding: 2%;
+    justify-content: center;
+}
+
+.exchange-block {
+    background-color: blanchedalmond;
+}
+
+.exchange-block #3{
+    background-color: blanchedalmond;
+}

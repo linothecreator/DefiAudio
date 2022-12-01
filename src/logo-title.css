@@ -1,0 +1,10 @@
+.logo-title {
+    background-color: rgb(0, 0, 0);
+    
+}
+
+.logo-title h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-stretch: expanded;
+    font-size: 50px;
+}
